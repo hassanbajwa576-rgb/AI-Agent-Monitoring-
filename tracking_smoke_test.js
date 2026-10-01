@@ -6,5 +6,9 @@ function trackingRunLabel(date = new Date()) {
   return `run at ${date.toISOString()}`;
 }
 
-console.log(trackingStatus());
-console.log(trackingRunLabel());
+if (require.main === module) {
+  console.log(trackingStatus());
+  console.log(trackingRunLabel());
+}
+
+module.exports = { trackingStatus, trackingRunLabel };
